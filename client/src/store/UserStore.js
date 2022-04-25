@@ -2,7 +2,7 @@ import {makeAutoObservable} from 'mobx';
 
 export default class UserStore{
 constructor() {
-    this._isAuth = false //переменные с нижним подчеркиванием нельзя изменят(соглашение)
+    this._isAuth = true //переменные с нижним подчеркиванием нельзя изменят(соглашение)
     this._user = {}
     makeAutoObservable(this)
 }

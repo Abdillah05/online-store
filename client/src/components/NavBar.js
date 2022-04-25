@@ -23,7 +23,7 @@ const navigate = useNavigate()
     <Nav className="ml-auto" style={{color:'white'}}>
       <Button 
       variant={"outline-light"}
-      onClick={(() => navigate(ADMIN_ROUTE))}
+      onClick={() => navigate(ADMIN_ROUTE)}
       >
         Админ панель</Button>
       <Button 

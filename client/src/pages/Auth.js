@@ -4,7 +4,7 @@ import { LOGIN_ROUTE, REGISTRATION_ROUTE } from "../utils/const";
 
 const Auth = () => {
     const location = useLocation()
-    console.log(location);
+ 
     const isLogin = location.pathname === LOGIN_ROUTE 
     return (
 <Container
