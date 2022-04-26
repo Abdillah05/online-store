@@ -14,6 +14,11 @@ import { ADMIN_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from "../utils/const";
 const NavBar = observer( () => {
  const { user } = useContext(Context)
 const navigate = useNavigate()
+
+const logOut = () => {
+  user.setUser({})
+  user.setIsAuth(false)
+}
     return ( 
         <>
          <Navbar bg="dark" variant="dark">
@@ -29,14 +34,14 @@ const navigate = useNavigate()
       <Button 
       variant={"outline-light"}  
       className="ml-2"
-      onClick={()=> navigate(LOGIN_ROUTE)}
+      onClick={()=> logOut()}
       >
         Выйти</Button>
     </Nav>
     :
     <Nav className="ml-auto" style={{color:'white'}}>
      
-      <Button variant={"outline-light"} onClick={() => user.setIsAuth(true)} >Авторизация</Button>
+      <Button variant={"outline-light"} onClick={() => navigate(LOGIN_ROUTE)} >Авторизация</Button>
     </Nav>
 }
     </Container>
