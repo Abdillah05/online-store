@@ -6,22 +6,35 @@ import { Context } from "../index";
 const BrandBar = observer( () => {
 
     const { device } = useContext(Context)
-console.log(device._brands);
+
     return ( 
-<Row className="d-flex">
-            {
-            device.brands.map(brand =>
-                <Card
-                    style={{cursor:"pointer"}}
-                    key={brand.id}
-                    className="p-3"
-                    onClick={() => device.setSelectedBrand(brand)}
-                    border={brand.id === device.selectedBrand.id ? "danger" : "light"}
-                >
-                    {brand.name}
-                </Card>
-            )}
-        </Row>
+
+        <Row className="d-flex">
+        {device.brands.map(brand =>
+            <Card
+                style={{cursor:'pointer'}}
+                key={brand.id}
+                className="p-3"
+                onClick={() => device.setSelectedBrand(brand)}
+                border={brand.id === device.selectedBrand.id ? 'danger' : 'light'}
+            >
+                {brand.name}
+            </Card>
+        )}
+    </Row>
+//  <Row className="d-flex">
+//             {device.brands.map(brand =>
+//                 <Card
+//                     style={{cursor:'pointer'}}
+//                     key={brand.id}
+//                     className="p-3"
+//                     onClick={() => device.setSelectedBrand(brand)}
+//                     border={brand.id === device.selectedBrand.id ? 'danger' : 'light'}
+//                 >
+//                     {brand.name}
+//                 </Card>
+//             )}
+//         </Row>
      )
 })
  
