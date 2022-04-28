@@ -20,6 +20,7 @@ const TypeBar = observer( () => {
           )}
       </ListGroup>
      );
+     
 })
  
 export default TypeBar;
